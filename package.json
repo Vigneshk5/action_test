@@ -1,0 +1,11 @@
+{
+  "name": "action-test-pinger",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "ping": "node scripts/ping.js"
+  },
+  "dependencies": {
+    "puppeteer": "^21.3.4"
+  }
+}
