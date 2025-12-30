@@ -7,7 +7,7 @@ How it works
 - It runs a Node.js script that uses Puppeteer to open each URL and waits until the page is fully loaded (`networkidle0`).
 
 Run locally
-- Install dependencies: 
+- Install dependencies:
 
 ```bash
 npm install
@@ -18,4 +18,7 @@ npm install
 ```bash
 URLS="https://www.amde.dev\nhttps://www.aadsmart.in" npm run ping
 ```
+
+CI notes
+- The workflow attempts `npm ci` first (fast, deterministic). If no `package-lock.json` exists the workflow falls back to `npm install` to avoid failing in CI. For deterministic installs and faster CI runs, generate and commit a `package-lock.json` by running `npm install` locally and committing the lockfile.
 "# action_test" 
